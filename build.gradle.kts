@@ -28,3 +28,7 @@ tasks.withType<KotlinCompile> {
 application {
   mainClass.set("MainKt")
 }
+
+val jar by tasks.getting(Jar::class) {
+  duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
